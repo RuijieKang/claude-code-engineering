@@ -43,3 +43,56 @@ Claude Code 记忆系统是提高效率的关键：
    - 使用条件规则按需加载
 
 **记住：** CLAUDE.md 是给 Claude 的入职文档，让它快速理解你的项目 DNA。
+
+---
+
+## Jack's Notes: Managing Memory Directly with Claude Code
+
+You don't need to manually edit CLAUDE.md files — Claude Code can manage its own memory through conversation.
+
+### Saving memories
+
+Just tell Claude what to remember:
+
+```
+Remember that we use pnpm, not npm, in this project.
+Remember my name is Jack and I prefer concise responses.
+```
+
+Claude will write the information into the appropriate CLAUDE.md file automatically.
+
+### Reading and reviewing memories
+
+Ask Claude to surface what it knows:
+
+```
+What do you remember about this project?
+Show me what's in CLAUDE.md.
+```
+
+Claude will read and summarize the current memory files.
+
+### Updating and forgetting
+
+```
+Forget the rule about using tabs — we switched to spaces.
+Update your memory: the API base URL is now https://api.example.com/v2
+```
+
+Claude will locate the relevant entry and edit or remove it.
+
+### Choosing the right level
+
+Tell Claude which layer to target:
+
+```
+Add this to the global CLAUDE.md, not the project one.
+Save this only in CLAUDE.local.md — it's personal, not for the team.
+```
+
+### Tips
+
+- **Team rules** → commit `CLAUDE.md` to git so everyone benefits.
+- **Personal preferences** → use `CLAUDE.local.md` and add it to `.gitignore`.
+- **Audit anytime**: `cat CLAUDE.md` or ask Claude to read it.
+- Keep entries short and specific — Claude loads the whole file on every session.

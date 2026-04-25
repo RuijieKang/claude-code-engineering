@@ -110,3 +110,13 @@ Claude 可以执行脚本而不需要将整个脚本内容放入上下文。
 - `reference/` 目录：详细的 API 参考
 - `validation/` 目录：验证规则
 - 更多框架支持的 pattern 文件
+
+## Jack's Note
+
+Skills — especially **reference-type skills** — can handle a much broader range of tasks compared to task-oriented skills. The key distinction is what the skill is actually doing:
+
+- A **task-oriented skill** encodes a narrow workflow. It tells the agent *exactly* what steps to take for one specific job (e.g., "generate an OpenAPI file from this directory"). The skill carries most of the intelligence.
+
+- A **reference-type skill** is primarily a **customization layer** on top of an agent that already has extensive embedded knowledge and an internal agentic flow. The skill doesn't need to spell out every step — it just provides context, standards, and pointers. The agent's own reasoning fills in the rest.
+
+This is why reference-type skills scale so well: the same `SKILL.md` can guide the agent through a simple one-endpoint doc request *and* a full multi-service OpenAPI generation, because the agent adapts its internal flow to the task at hand. You're not programming a script — you're orienting a capable reasoner.
