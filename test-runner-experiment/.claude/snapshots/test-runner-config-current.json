@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-05-16T15:31:54.302Z",
+  "agent": "test-runner",
+  "sourceFile": "/home/user/claude-code-engineering/test-runner-experiment/.claude/agents/test-runner.md",
+  "fileSHA256": "f4e3244000e6181373fc1d6fd8c54ab6832622a4ec22e8b2a7ad678b3389041b",
+  "config": {
+    "name": "test-runner",
+    "description": "Run tests and report results concisely. Use this after code changes to verify everything works.",
+    "tools": [
+      "Read",
+      "Bash",
+      "Glob",
+      "Grep"
+    ],
+    "model": "haiku",
+    "version": "1.0.0"
+  },
+  "systemPromptLength": 765,
+  "parityVerified": true
+}
