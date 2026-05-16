@@ -30,8 +30,10 @@ function squareRoot(n) {
   return Math.sqrt(n);
 }
 
-// 故意的 bug：没有处理负数的情况
 function factorial(n) {
+  if (n < 0) {
+    throw new Error('Cannot calculate factorial of negative number');
+  }
   if (n === 0 || n === 1) return 1;
   return n * factorial(n - 1);
 }
